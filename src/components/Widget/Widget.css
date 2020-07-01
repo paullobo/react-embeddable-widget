@@ -1,0 +1,94 @@
+.widget-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(6, 6, 6);
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.2s ease-in;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.widget-container:hover .widget-icon{
+    transform: scale(1.09);
+}
+
+.widget-icon{
+    transition: all 0.2s ease-in;
+    color:rgba(255, 255, 255, 1);
+    font-size: 30px;
+}
+
+.support-icon{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.close-icon{
+    opacity: 0;
+    font-size: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.widget-container.active .support-icon{
+    opacity: 0;
+    font-size: 0px;
+}
+
+.widget-container.active .close-icon{
+    font-size: 30px;
+    opacity: 1;
+}
+
+.widget-dialog{
+    position: absolute;
+    display: none;
+    min-width: 280px;
+    height: auto;
+    background: rgb(6, 6, 6);
+    bottom: 74px;
+    border-radius: 15px;
+    right: 0;
+    padding: 20px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget-container.active .widget-dialog{
+    display: flex;
+}
+
+.dialog-head{
+    font-size: 22px;
+    color: #fff;
+}
+
+.dialog-contact{
+    font-size: 20px;
+    padding: 5px 15px;
+    background: rgba(69, 230, 141, 0.18);
+    border-radius: 20px;
+    color: #3af551;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.dialog-contact a{
+    color: #3af551;
+    text-decoration: none;
+}
+
+
+.dialog-contact .call-icon{
+    margin-right: 10px;
+}
